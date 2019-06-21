@@ -40,7 +40,7 @@ class Todo extends React.Component {
     }
 
     const newItems = items.slice();
-    newItems.slice(index, 1);
+    newItems.splice(index, 1);
 
     this.setState({
       items: newItems

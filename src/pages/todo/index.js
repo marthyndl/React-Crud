@@ -31,7 +31,7 @@ function TodoPage(props) {
       <Card>
         <H2>TODO</H2>
         <Button text="New Item" intent={Intent.PRIMARY} icon="new-object" onClick={onNewItem} />
-        <Callout intent={Intent.PRIMARY}>Error</Callout>
+        <Callout intent={Intent.DANGER}>Error</Callout>
         <Divider />
         <UL className="todo-list">
           {items.map(item => (
@@ -52,7 +52,7 @@ function TodoPage(props) {
                   value={newItemText}
                   onChange={onChangeNewItemText}
                   onBlur={() => onExitEditMode(item)}
-                  input={ref => ref && ref.focus()}
+                  inputRef={ref => ref && ref.focus()}
                 />
               ) : (
                 <React.Fragment>
